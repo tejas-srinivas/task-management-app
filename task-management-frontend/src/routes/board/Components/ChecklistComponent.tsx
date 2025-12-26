@@ -1,9 +1,7 @@
 import { CheckSquare, Plus } from 'lucide-react';
 import { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
+import { Button, Checkbox, Input } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

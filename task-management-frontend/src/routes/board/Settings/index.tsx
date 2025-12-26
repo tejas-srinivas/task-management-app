@@ -5,16 +5,12 @@ import { useMutation, useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { BoardStatusEnumType, UserRoleEnumType } from '@/__generated__/graphql';
+import { ErrorAlert, FormInput, FormPanelWithReadMode, Loader } from '@/components';
 import Layout from '@/layouts/SidebarLayout';
-
-import { FormInput } from '@/components/FormPanel';
-import { FormPanelWithReadMode } from '@/components/FormPanel';
-import Loader from '@/components/Loader';
 
 import { getUserRole } from '@/utils/auth';
 
 import CloseBoardDialogButton from './CloseBoardDialogButton';
-import { ErrorAlert } from '@/components/ErrorAlert';
 
 const GET_BOARD_INFORMATION = gql(`
     query BoardInformation($boardId: ID!) {

@@ -4,10 +4,7 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
-
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button, Input, Loader } from '@/components';
 
 import { useBoard } from '../BoardContext/useBoard';
 

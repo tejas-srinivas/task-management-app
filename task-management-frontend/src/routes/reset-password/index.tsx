@@ -6,10 +6,7 @@ import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import logo from '@/assests/icon.png';
-
-import { FormPanel } from '@/components/FormPanel';
-import FormInput from '@/components/FormPanel/FormInput';
-import { Button } from '@/components/ui/button';
+import { Button, FormInput, FormPanel } from '@/components';
 
 const RESET_PASSWORD_MUTATION = gql(`
   mutation ResetPassword($email: String!, $oldPassword: String!, $newPassword: String!) {

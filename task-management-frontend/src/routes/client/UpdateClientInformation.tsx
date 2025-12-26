@@ -4,9 +4,7 @@ import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { ClientType } from '@/__generated__/graphql';
-
-import { FormPanelWithReadMode } from '@/components/FormPanel';
-import FormInput from '@/components/FormPanel/FormInput';
+import { FormInput, FormPanelWithReadMode } from '@/components';
 
 const UPDATE_CLIENT_INFORMATION = gql(`
   mutation UpdateClientInformation($clientId: ID!, $name: String!, $description: String!, $status: ClientStatusEnumType!) {

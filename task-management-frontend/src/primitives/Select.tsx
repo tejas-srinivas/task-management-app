@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   Select as SelectUI,
   SelectValue,
-} from '@/components/ui/select';
+} from '@/components';
 
 import { cn } from '@/utils/classnames';
 import { formatStatus } from '@/utils/format-helpers';

@@ -3,15 +3,14 @@ import { MoreHorizontal, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 
 import { CommentType } from '@/__generated__/graphql';
-import { EditableTextTrigger } from '@/primitives/EditableTextTrigger';
-
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from '@/components';
+import { EditableTextTrigger } from '@/primitives/EditableTextTrigger';
 
 import useDebouncedCallback from '@/utils/debounce';
 

@@ -1,8 +1,7 @@
 import { Children, isValidElement, useReducer, useState } from 'react';
 import type { Dispatch, FC, ReactElement, ReactNode } from 'react';
 
-import { ErrorAlert } from '@/components/ErrorAlert';
-import { Button } from '@/components/ui/button';
+import { Button, ErrorAlert } from '@/components';
 
 import { cn } from '@/utils/classnames';
 import { compareValues } from '@/utils/compare-values';

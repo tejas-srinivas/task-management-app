@@ -5,11 +5,8 @@ import { toast } from 'sonner';
 import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
-
-import { FormPanel } from '@/components/FormPanel';
-import FormInput from '@/components/FormPanel/FormInput';
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -17,7 +14,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
+  FormInput,
+  FormPanel,
+} from '@/components';
 
 const CREATE_CLIENT_ADMIN_MUTATION = gql(`
   mutation CreateClientAdminUser($email: String!, $fullName: String!, $clientId: String!) {

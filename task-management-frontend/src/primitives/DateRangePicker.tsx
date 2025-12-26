@@ -3,8 +3,7 @@ import { CalendarIcon } from 'lucide-react';
 import { FC } from 'react';
 import { DateRange } from 'react-day-picker';
 
-import { Calendar } from '@/components/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Calendar, Popover, PopoverContent, PopoverTrigger } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

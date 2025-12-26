@@ -1,4 +1,4 @@
-import { Switch as SwitchUI } from '@/components/ui/switch';
+import { Switch as SwitchUI } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

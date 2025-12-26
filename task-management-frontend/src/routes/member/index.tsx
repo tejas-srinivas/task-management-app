@@ -5,14 +5,18 @@ import { useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { UserRoleEnumType } from '@/__generated__/graphql';
+import {
+  Button,
+  Card,
+  DetailsPanel,
+  ErrorAlert,
+  Loader,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components';
 import Layout from '@/layouts/SidebarLayout';
-
-import { DetailsPanel } from '@/components/DetailsPanel';
-import { ErrorAlert } from '@/components/ErrorAlert';
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { formatRole, formatStatus } from '@/utils/format-helpers';
 

@@ -5,13 +5,9 @@ import { useMutation, useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { UserRoleEnumType } from '@/__generated__/graphql';
+import { Button, ErrorAlert, Loader, Popover, PopoverContent, PopoverTrigger } from '@/components';
 import CheckboxGroup from '@/primitives/CheckboxGroup';
 import TextField from '@/primitives/TextField';
-
-import { ErrorAlert } from '@/components/ErrorAlert';
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 import { useBoard } from '../BoardContext/useBoard';
 

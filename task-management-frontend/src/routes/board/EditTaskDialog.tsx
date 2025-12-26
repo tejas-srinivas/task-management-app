@@ -15,11 +15,8 @@ import { useLazyQuery, useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { TaskPriorityEnumType, TaskType } from '@/__generated__/graphql';
+import { Button, Sheet, SheetContent, SheetDescription, SheetTitle, Textarea } from '@/components';
 import { EditableTextTrigger } from '@/primitives/EditableTextTrigger';
-
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetDescription, SheetTitle } from '@/components/ui/sheet';
-import { Textarea } from '@/components/ui/textarea';
 
 import { getUser } from '@/utils/auth';
 import { TAG_OPTIONS } from '@/utils/constants';

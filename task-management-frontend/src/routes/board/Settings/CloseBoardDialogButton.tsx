@@ -5,10 +5,8 @@ import { toast } from 'sonner';
 import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
-
-import { ErrorAlert } from '@/components/ErrorAlert';
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -16,7 +14,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
+  ErrorAlert,
+} from '@/components';
 
 const CLOSE_BOARD = gql(`
     mutation CloseBoard($boardId: ID!) {

@@ -1,5 +1,4 @@
-import { RadioGroupItem } from '@/components/ui/radio-group';
-import { RadioGroup as RadioGroupUI } from '@/components/ui/radio-group';
+import { RadioGroupItem, RadioGroup as RadioGroupUI } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

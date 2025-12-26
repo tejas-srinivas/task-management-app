@@ -2,15 +2,15 @@ import { Filter, MoreVertical, Plus, Settings } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
 import { UserRoleEnumType } from '@/__generated__/graphql';
-
-import { Button } from '@/components/ui/button';
-import { DropdownMenuGroup, DropdownMenuLabel } from '@/components/ui/dropdown-menu';
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from '@/components';
 
 import { useBoard } from '../BoardContext/useBoard';
 import GiveAccessDropdown from '../Components/GiveAccessDropdown';

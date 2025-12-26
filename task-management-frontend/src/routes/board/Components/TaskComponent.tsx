@@ -2,9 +2,14 @@ import { format, isToday, isTomorrow } from 'date-fns';
 import { CircleCheckBig, Clock, ListChecks, MessageSquareMore, Paperclip } from 'lucide-react';
 
 import { TaskType } from '@/__generated__/graphql';
-
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import {
+  Avatar,
+  AvatarFallback,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components';
 
 import { cn } from '@/utils/classnames';
 import { formatStatus, formatTag } from '@/utils/format-helpers';

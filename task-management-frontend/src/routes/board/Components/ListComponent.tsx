@@ -6,11 +6,8 @@ import { Draggable, Droppable } from '@hello-pangea/dnd';
 
 import { gql } from '@/__generated__/gql';
 import { ListType, TaskType } from '@/__generated__/graphql';
+import { Button, Loader, Textarea } from '@/components';
 import { EditableTextTrigger } from '@/primitives/EditableTextTrigger';
-
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
 
 import useDebouncedCallback from '@/utils/debounce';
 

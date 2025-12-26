@@ -1,7 +1,7 @@
 import { UploadIcon } from 'lucide-react';
 import { ChangeEvent, ElementType, useRef } from 'react';
 
-import { Input } from '@/components/ui/input';
+import { Input } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

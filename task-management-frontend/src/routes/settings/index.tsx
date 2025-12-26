@@ -1,8 +1,6 @@
+import { DetailsPanel, ThemeToggle } from '@/components';
 import Layout from '@/layouts/SidebarLayout';
 import { useViteTheme } from '@/theme/vite';
-
-import { DetailsPanel } from '@/components/DetailsPanel';
-import { ThemeToggle } from '@/components/ThemeToggle';
 
 import { getUser } from '@/utils/auth';
 import { formatRole, formatStatus } from '@/utils/format-helpers';

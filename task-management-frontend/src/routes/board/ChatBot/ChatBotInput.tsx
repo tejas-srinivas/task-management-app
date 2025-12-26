@@ -1,7 +1,7 @@
 import { ArrowUp, Square } from 'lucide-react';
 import { useRef, useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components';
 import TextField from '@/primitives/TextField';
 
 interface ChatBotInputProps {

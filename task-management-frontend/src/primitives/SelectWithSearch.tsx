@@ -1,16 +1,18 @@
 import { CheckIcon, ChevronsUpDownIcon } from 'lucide-react';
 import { type FC, useState } from 'react';
 
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components';
 
 import { cn } from '@/utils/classnames';
 

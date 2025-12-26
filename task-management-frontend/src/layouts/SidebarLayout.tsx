@@ -1,10 +1,9 @@
 import { ReactNode } from 'react';
 
-import { Layout as SidebarLayout } from '@/components/Layout';
-
 import Icon from '@/assests/icon.png';
+import { Layout as SidebarLayout } from '@/components';
 
-import { sideBarTitle, getSidebarItems, sidebarSubtitle } from '@/utils/sidebar-items';
+import { getSidebarItems, sideBarTitle, sidebarSubtitle } from '@/utils/sidebar-items';
 
 export default function Layout({
   children,

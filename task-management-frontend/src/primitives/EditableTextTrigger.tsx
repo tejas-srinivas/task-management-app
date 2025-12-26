@@ -2,8 +2,7 @@ import { useRef, useState } from 'react';
 import React from 'react';
 
 import { AttachmentType } from '@/__generated__/graphql';
-
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 
 import DatePicker from './DatePicker';
 import { MultiSelectTrigger } from './MultiSelect';

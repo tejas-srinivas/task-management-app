@@ -4,10 +4,7 @@ import { useLocation, useNavigate } from 'react-router';
 import { gql, useMutation } from '@apollo/client';
 
 import logo from '@/assests/icon.png';
-
-import { FormPanel } from '@/components/FormPanel';
-import FormInput from '@/components/FormPanel/FormInput';
-import { Button } from '@/components/ui/button';
+import { Button, FormInput, FormPanel } from '@/components';
 
 import { storeLoginCredentials } from '@/utils/auth';
 
@@ -55,9 +52,7 @@ export default function Login() {
       <div className="w-full max-w-md rounded-lg shadow-md p-8 bg-card text-card-foreground border border-border">
         <div className="flex flex-col items-center mb-6">
           <img src={logo} alt="Task Management Logo" className="w-16 h-16 mb-3" />
-          <h1 className="text-2xl font-bold text-center tracking-tight">
-            Task Management System
-          </h1>
+          <h1 className="text-2xl font-bold text-center tracking-tight">Task Management System</h1>
         </div>
         <FormPanel
           onSubmit={data =>

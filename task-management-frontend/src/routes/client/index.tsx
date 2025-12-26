@@ -5,12 +5,16 @@ import { useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { ClientType } from '@/__generated__/graphql';
+import {
+  DataTable,
+  ErrorAlert,
+  Loader,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components';
 import Layout from '@/layouts/SidebarLayout';
-
-import { DataTable } from '@/components/DataTable';
-import { ErrorAlert } from '@/components/ErrorAlert';
-import Loader from '@/components/Loader';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { formatRole, formatStatus } from '@/utils/format-helpers';
 

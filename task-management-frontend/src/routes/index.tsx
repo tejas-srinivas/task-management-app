@@ -1,9 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router';
 
-import Loader from '@/components/Loader';
-import NotFound from '@/components/NotFound';
-import ProtectedRoute from '@/components/ProtectedRoute';
+import { Loader, NotFound, ProtectedRoute } from '@/components';
 
 const Board = lazy(() => import('./board'));
 const Boards = lazy(() => import('./boards'));

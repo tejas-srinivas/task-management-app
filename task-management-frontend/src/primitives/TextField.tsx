@@ -1,7 +1,6 @@
 import React, { ElementType, forwardRef } from 'react';
 
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Input, Textarea } from '@/components';
 
 import { cn } from '@/utils/classnames';
 

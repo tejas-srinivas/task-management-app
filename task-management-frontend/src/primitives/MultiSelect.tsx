@@ -5,8 +5,8 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
+  Input,
+} from '@/components';
 
 import { cn } from '@/utils/classnames';
 import { formatTag } from '@/utils/format-helpers';

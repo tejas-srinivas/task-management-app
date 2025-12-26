@@ -5,11 +5,9 @@ import { useQuery } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { SortTypeEnumType, UserRoleEnumType } from '@/__generated__/graphql';
+import { DataTable, ErrorAlert } from '@/components';
 import Layout from '@/layouts/SidebarLayout';
 import FilterBar from '@/primitives/FilterBar';
-
-import { DataTable } from '@/components/DataTable';
-import { ErrorAlert } from '@/components/ErrorAlert';
 
 import { getUser } from '@/utils/auth';
 import { formatStatus } from '@/utils/format-helpers';

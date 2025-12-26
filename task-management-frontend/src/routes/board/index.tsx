@@ -12,15 +12,12 @@ import {
   TaskPriorityEnumType,
   TaskType,
 } from '@/__generated__/graphql';
+import { Button, ErrorAlert, Loader } from '@/components';
 import { ChatBotLayout } from '@/layouts/ChatBotLayout';
 import TaskBoardLayout from '@/layouts/TaskBoardLayout';
 import { EditableTextTrigger } from '@/primitives/EditableTextTrigger';
 import FilterBar from '@/primitives/FilterBar';
 import { BoardProvider } from '@/routes/board/BoardContext/BoardContext';
-
-import { ErrorAlert } from '@/components/ErrorAlert';
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
 
 import { cn } from '@/utils/classnames';
 import { DUEDATE_OPTIONS, TAG_OPTIONS } from '@/utils/constants';

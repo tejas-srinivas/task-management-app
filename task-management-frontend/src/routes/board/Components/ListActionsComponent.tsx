@@ -3,15 +3,14 @@ import { MoreHorizontal, Trash2 } from 'lucide-react';
 import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
-
-import Loader from '@/components/Loader';
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  Loader,
+} from '@/components';
 
 import { GET_LIST_QUERY } from '../BoardContext/mutations';
 import { useBoard } from '../BoardContext/useBoard';

@@ -6,10 +6,8 @@ import { useMutation } from '@apollo/client';
 
 import { gql } from '@/__generated__/gql';
 import { UserStatusEnumType } from '@/__generated__/graphql';
-
-import { ErrorAlert } from '@/components/ErrorAlert';
-import { Button } from '@/components/ui/button';
 import {
+  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -17,7 +15,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
+  ErrorAlert,
+} from '@/components';
 
 const UPDATE_USER_STATUS = gql(`
   mutation UpdateUserStatus($updateUserStatusId: ID!, $status: UserStatusEnumType!) {

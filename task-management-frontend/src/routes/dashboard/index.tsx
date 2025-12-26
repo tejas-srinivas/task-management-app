@@ -2,13 +2,8 @@ import { useNavigate } from 'react-router';
 
 import { useQuery } from '@apollo/client';
 
+import { Avatar, Card, CardTitle, ErrorAlert, Loader, Tooltip } from '@/components';
 import Layout from '@/layouts/SidebarLayout';
-
-import { ErrorAlert } from '@/components/ErrorAlert';
-import Loader from '@/components/Loader';
-import { Card, CardTitle } from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Tooltip } from '@/components/ui/tooltip';
 
 import { getUserRole } from '@/utils/auth';
 
