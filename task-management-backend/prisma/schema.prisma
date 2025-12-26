@@ -1,0 +1,147 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id        String   @id @db.Uuid
+  email     String   @unique @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  fullName  String   @db.VarChar(255)
+  role      Int      @default(1) // Member = 0, Cliet_Admin = 1, Super_Admin = 2
+  status    Int      @default(1) // Inactive = 0 , Active = 1, Invited = 2
+  clientId  String?  @db.Uuid
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+
+  client           client?         @relation(fields: [clientId], references: [id])
+  assignedTasks    task_assignee[]
+  boardmembers     board_member[]
+  comments         comment[]       @relation("UserComments")
+  boardInvitesSent board_member[]  @relation("InvitedByUser")
+}
+
+model client {
+  id          String   @id @db.Uuid
+  name        String   @db.VarChar(255)
+  description String   @db.VarChar(255)
+  status      Int      @default(1) // 0 = Inactive, 1 = Active
+  createdAt   DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime @updatedAt @db.Timestamptz(6)
+
+  users  user[]
+  boards board[]
+}
+
+model board {
+  id          String   @id @db.Uuid
+  name        String   @db.VarChar(255)
+  description String?  @db.VarChar(255)
+  clientId    String   @db.Uuid
+  status      Int      @default(1) // 0 = Inactive, 1 = Active
+  createdAt   DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime @updatedAt @db.Timestamptz(6)
+
+  client  client         @relation(fields: [clientId], references: [id])
+  lists   list[]
+  members board_member[]
+}
+
+model board_member {
+  id        String  @id @default(uuid()) @db.Uuid
+  boardId   String  @db.Uuid
+  userId    String  @db.Uuid
+  invitedBy String? @db.Uuid
+
+  user          user     @relation(fields: [userId], references: [id])
+  invitedByUser user?    @relation("InvitedByUser", fields: [invitedBy], references: [id])
+  board         board    @relation(fields: [boardId], references: [id])
+  createdAt     DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt     DateTime @updatedAt @db.Timestamptz(6)
+
+  @@unique([boardId, userId])
+}
+
+model list {
+  id        String   @id @db.Uuid
+  name      String   @db.VarChar(255)
+  boardId   String   @db.Uuid
+  position  Int
+
+  board     board    @relation(fields: [boardId], references: [id])
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+
+  tasks task[]
+}
+
+model task {
+  id          String    @id @db.Uuid
+  title       String    @db.Text
+  description String?   @db.Text
+  dueDate     DateTime?
+  priority    Int? // High = 1 | Medium = 2 | Low = 3 | Immediate = 0
+  position    Int
+  listId      String    @db.Uuid
+  tags        String[]  @db.VarChar(100)
+  createdAt   DateTime  @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime  @updatedAt @db.Timestamptz(6)
+  isCompleted Boolean
+
+  list        list             @relation(fields: [listId], references: [id])
+  attachments attachment[]
+  checklist   checklist_item[]
+  assignees   task_assignee[]
+  comments    comment[]
+}
+
+model attachment {
+  id        String   @id @db.Uuid
+  url       String
+  name      String
+  type      String
+  taskId    String   @db.Uuid
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+
+  task task @relation(fields: [taskId], references: [id])
+}
+
+model checklist_item {
+  id          String   @id @db.Uuid
+  label       String
+  taskId      String   @db.Uuid
+  isCompleted Boolean
+  createdAt   DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt   DateTime @updatedAt @db.Timestamptz(6)
+
+  task task @relation(fields: [taskId], references: [id])
+}
+
+model comment {
+  id        String   @id @db.Uuid
+  authorId  String   @db.Uuid
+  text      String
+  taskId    String   @db.Uuid
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+
+  author user @relation("UserComments", fields: [authorId], references: [id])
+  task   task @relation(fields: [taskId], references: [id])
+}
+
+model task_assignee {
+  id        String   @id @default(uuid()) @db.Uuid
+  task      task     @relation(fields: [taskId], references: [id])
+  taskId    String   @db.Uuid
+  user      user     @relation(fields: [userId], references: [id])
+  userId    String   @db.Uuid
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+
+  @@unique([taskId, userId])
+}
