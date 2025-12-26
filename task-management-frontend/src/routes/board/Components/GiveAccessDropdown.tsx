@@ -75,7 +75,7 @@ export default function GiveAccessDropdown() {
 
   const members = data?.client.members?.nodes;
 
-  // filtering with super_admin only for ToyStack Board
+  // filtering with super_admin only for Admin Board
   const filteredMembers = members?.filter(
     m =>
       ((m.fullName as string).toLowerCase().includes(search.toLowerCase()) &&

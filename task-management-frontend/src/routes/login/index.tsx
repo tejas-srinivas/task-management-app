@@ -54,9 +54,9 @@ export default function Login() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-background text-foreground">
       <div className="w-full max-w-md rounded-lg shadow-md p-8 bg-card text-card-foreground border border-border">
         <div className="flex flex-col items-center mb-6">
-          <img src={logo} alt="Toystack Logo" className="w-16 h-16 mb-3" />
+          <img src={logo} alt="Task Management Logo" className="w-16 h-16 mb-3" />
           <h1 className="text-2xl font-bold text-center tracking-tight">
-            ToyStack Agentic Task board
+            Task Management System
           </h1>
         </div>
         <FormPanel

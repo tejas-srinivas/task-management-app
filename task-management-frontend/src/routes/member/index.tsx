@@ -99,7 +99,7 @@ export default function Member() {
   }
 
   return (
-    <Layout title={member.fullName ?? 'Member'} subtitle={`${client?.name ?? 'ToyStack'}`}>
+    <Layout title={member.fullName ?? 'Member'} subtitle={`${client?.name ?? 'Admin'}`}>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full mt-6">
         <TabsList>
           <TabsTrigger value="info">Infomation</TabsTrigger>
@@ -110,7 +110,7 @@ export default function Member() {
             <DetailsPanel
               data={member}
               title="Member Information"
-              subTitle={client?.name ?? 'ToyStack'}
+              subTitle={client?.name ?? 'Admin'}
               layout="grid"
               fields={[
                 { label: 'Name', fieldName: 'fullName', type: 'STRING' },

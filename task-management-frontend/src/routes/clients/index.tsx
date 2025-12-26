@@ -100,7 +100,7 @@ export default function Clients() {
   }
 
   return (
-    <Layout title="Clients" subtitle="List of Toystack's Clients">
+    <Layout title="Clients" subtitle="List of Admin's Clients">
       <div className="mt-6">
         <div className="flex items-center justify-between mb-4">
           <FilterBar

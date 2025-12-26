@@ -51,8 +51,8 @@ export async function uploadToS3({
 function init() {
   const workbook = new excel.Workbook();
 
-  workbook.creator = 'Toystack AI';
-  workbook.lastModifiedBy = 'Toystack AI';
+  workbook.creator = 'Task Management';
+  workbook.lastModifiedBy = 'Task Management';
   workbook.created = new Date();
   workbook.modified = new Date();
   workbook.lastPrinted = new Date();

@@ -281,7 +281,7 @@ const getClientMembers = async (
   sortType: string = "DESC"
 ): Promise<UsersEntity | null> => {
   const { text = "" } = filters || {};
-  //clientId for Toystack
+  //clientId for Admin
   const isSpecialClient = clientId === "80ca8506-4e52-49a9-90e8-c826ec55dd92";
   
   const whereClause = {

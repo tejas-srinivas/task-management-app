@@ -1,10 +1,10 @@
-# Agentic Task Board
+# Task Board Management Application
 
 A modern web application for managing client requirements.
 
 ## Overview
 
-The Agentic Task Board is a collaborative project management application that empowers teams to visually organize and track their work using boards, lists, and cards. It supports real-time updates, role-based access control, checklists, comments, and file attachments, enabling seamless workflow management and communication. Built with a modern React frontend and a robust Node.js/GraphQL backend, the platform is designed for flexibility, scalability, and enhanced team productivity.
+The Task Board is a collaborative project management application that empowers teams to visually organize and track their work using boards, lists, and cards. It supports real-time updates, role-based access control, checklists, comments, and file attachments, enabling seamless workflow management and communication. Built with a modern React frontend and a robust Node.js/GraphQL backend, the platform is designed for flexibility, scalability, and enhanced team productivity.
 
 ## Technologies Used
 

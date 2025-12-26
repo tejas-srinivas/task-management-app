@@ -1,5 +1,3 @@
-# TOYSTACK-TASK-BOARD-BACKEND
-
 This is the task-board backend which handles the task-board functionality
 
 ## Installation

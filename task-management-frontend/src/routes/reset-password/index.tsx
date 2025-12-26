@@ -44,7 +44,7 @@ export default function ResetPassword() {
     <div className="min-h-screen flex flex-col items-center justify-center px-4 bg-background text-foreground">
       <div className="w-full max-w-md rounded-lg shadow-md p-8 bg-card text-card-foreground border border-border">
         <div className="flex flex-col items-center mb-6">
-          <img src={logo} alt="Toystack Logo" className="w-16 h-16 mb-3" />
+          <img src={logo} alt="Task Management Logo" className="w-16 h-16 mb-3" />
           <h1 className="text-2xl font-bold text-center tracking-tight">Reset Your Password</h1>
           <p className="text-sm text-muted-foreground text-center mt-2">
             Fill the details below to reset passowrd
